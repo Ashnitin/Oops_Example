@@ -16,14 +16,24 @@ public class Dog {
         System.out.println("Weight is: "+weight);
     }
     public void age(){
-        int birthYear,PresentYear;
         System.out.println("*******Age Calculater******");
-        System.out.println("Enter Birth Year Of Dog: ");
-        birthYear=sc.nextInt();
-        System.out.println("Enter Present Year: ");
-        PresentYear=sc.nextInt();
-        age=PresentYear-birthYear;
-        System.out.println("Age of Dog is: "+age);
+        System.out.println("Enter Dog Age : ");
+        age=sc.nextInt();
+        if(age>0){
+            if(age==1){
+                System.out.println("Dogs Age in Human Year Is 15 Year ");
+            } else if (age==2) {
+                age=15+9;
+                System.out.println("Dogs Age in Human Year is:"+age);
+            }
+            else{
+                age=(age-2)*10+24;
+                System.out.println("Dogs Age in human year is: "+age);
+            }
+        }
+        else {
+            System.out.println("Enter Valid Year");
+        }
     }
 
     public static void main(String[] args) {
